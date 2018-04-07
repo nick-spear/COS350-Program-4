@@ -1,0 +1,90 @@
+1 test file for the scroll program in cos350
+2 the lines are numbered to help you see the file
+3 most of the lines are otherwise blank
+4 
+5 If you are ever unsure how this file should look, compare it to more.
+6 If you are just paging through a file, the output should be identical to more
+7 except that you will probably have a different prompt.
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 this is line 23, the last initial line displayed on an 80x24 terimal
+24 this is line 24, but you don't see it initially because of the prompt
+25 the line above should be at the top when paging
+26 
+27 
+28 
+29 
+30 
+31 
+32 
+33 
+34 
+35 
+36 
+37 
+38 
+39 
+40 
+41 
+42 
+43 
+44 
+45 
+46 this is the bottom of the second screenfull
+47 top line of third screenfull
+48 
+49 
+50 
+51 
+52 
+53 
+54 try a few blank lines:
+
+
+
+
+59 
+60 
+61 
+62 
+63 
+64 
+65 
+66 
+67 
+68 
+69 bottom line of third screenfull
+70 Now we will try a long line to see how line wrapping works. If it works correctly this line should scroll up one line's worth at a time. Otherwise I would probably expect that the scrolling will jump up as the entire line is output to the display.
+71 
+72 Now a test of tabs
+73 	one tab					| a	|
+74 		two tab				| bb	|
+75 			red tab			| ccc	|
+76 				blue tab	| dddd	|
+77 
+78 Now some tabs on a long line that wraps
+79 
+80 	a	b	c	d	e	f	g	h	i	j	k	l	m	n	o	p	q	r	s	t	u	v	w	x	y	z
+81 
+82 The last thing to test is the extra credit
+83 
+84 not in this version
+85 
+86 
+87 
+88 on a long line that wraps past the 80 columns, but may be deceptive because of the extra characters used to 
+89
+90 This is the last line of the file. It should stop and let me read this.
