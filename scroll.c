@@ -62,7 +62,6 @@ int main( int ac , char ** av )
   ioctl(1, TIOCGWINSZ, &winsizestruct);
   term_height = winsizestruct.ws_row;
   term_width = winsizestruct.ws_col;
-  printf("width %d\n", term_width);
   /*
    *
    */
@@ -112,20 +111,19 @@ void user_input() {
 
   while( (c = getc(fp_tty)) != 'q' ) // Reads user input from tty
     {
-      switch (c) {
-        case ' ':
-          if (scroll_flag == 1) remove_scroll();
-          next_page(0);
-        case '\n':
+      if (c == ' ') {
+        if (scroll_flag == 1) remove_scroll();
+        next_page(0);
+      } else if (c == '\n') {
         if (scroll_flag == 1) {
           remove_scroll();
         } else if (scroll_flag == 0) {
           set_scroll(1.0);
         }
-        case 'f':
-          if (scroll_flag == 1) set_scroll(0.8);
-        case 's':
-          if (scroll_flag == 1) set_scroll(1.2);
+      } else if (c == 'f') {
+        if (scroll_flag == 1) set_scroll(0.8);
+      } else if (c == 's') {
+        if (scroll_flag == 1) set_scroll(1.2);
       }
     }
 
